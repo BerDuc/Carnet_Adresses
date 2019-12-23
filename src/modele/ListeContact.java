@@ -28,8 +28,6 @@ public class ListeContact extends DefaultListModel<Contact> {
     }
 
 //methodes  
-    
-    
     public void trierLC() {
 
         ArrayList<Contact> liste = new ArrayList();

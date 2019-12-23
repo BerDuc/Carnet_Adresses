@@ -396,7 +396,6 @@ public class GUI extends JFrame {
             public void actionPerformed(ActionEvent e
             ) {
                 viderFormulaire();
-
             }
         }
         );
@@ -426,11 +425,8 @@ public class GUI extends JFrame {
                                 + "Souhaitez-vous poursuivre?", "Confirmation",
                                 YES_NO_OPTION);
                         index = liste.trouverContact(recherche, index);
-
                     }
-
                 } while (option == JOptionPane.YES_OPTION);
-
             }
         }
         );
@@ -453,5 +449,4 @@ public class GUI extends JFrame {
         txtPays.setText(null);
 
     }
-
 }
