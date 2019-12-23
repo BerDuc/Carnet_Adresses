@@ -45,15 +45,14 @@ public class AppCtr {
 
     public static void creerGui() {
 
-        int width = 620, height = 275;
+        final int WIDTH = 620, HEIGHT = 275;
         // initialiser frame
         GUI objGui = new GUI();
 
-        //Code repris d'ailleurs, à revoir vers la fin
         // indiquer le titre du frame
         objGui.setTitle("Carnet d'adresses");
         // Donner une taille de la frame pour  affichage
-        objGui.setSize(width, height);
+        objGui.setSize(WIDTH , HEIGHT);
         // Afficher la frame et donc le Panel
         objGui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         objGui.setLocationRelativeTo(null);
