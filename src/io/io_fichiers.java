@@ -36,7 +36,6 @@ public class io_fichiers {
         } catch (IOException ex) {
             Logger.getLogger(io_fichiers.class.getName()).log(Level.SEVERE, null, ex);
         }
-
     }
 
     //Cette methode a été rédigée de manière provisoire pour créer un premier 
@@ -70,9 +69,10 @@ public class io_fichiers {
 
     public static ListeContact chargerListe() throws IOException {
 
-        String line, file = "contacts.txt";
+        final String FILE = "contacts.txt";
+        String line;
 
-        ObjectInputStream in = new ObjectInputStream(new BufferedInputStream(new FileInputStream(file)));
+        ObjectInputStream in = new ObjectInputStream(new BufferedInputStream(new FileInputStream(FILE)));
         ListeContact liste = new ListeContact();
 
         try {
@@ -86,7 +86,7 @@ public class io_fichiers {
         } catch (ClassNotFoundException ex) {
             System.out.println("Fichier non-trouvé");
         } catch (EOFException ex) {
-
+            Logger.getLogger(io_fichiers.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
             in.close();
         }
@@ -96,5 +96,4 @@ public class io_fichiers {
         return liste;
 
     }
-
 }
